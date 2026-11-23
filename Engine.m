@@ -646,13 +646,15 @@
         {
           for (i = 0; i < [sourceMissingFiles count] && !stopTask; i++)
             {
-              FileObject *fileObj;
-              NSString *newAbsolutePath;
-
-              fileObj = [sourceMissingFiles objectAtIndex:i];
+              /* Local objects not used */
+              //FileObject *fileObj;
+              //NSString *newAbsolutePath;
+               
+              //fileObj = [sourceMissingFiles objectAtIndex:i];
 
               /* TODO should recheck ? */
-              newAbsolutePath = [[sourceMap rootPath] stringByAppendingPathComponent:[fileObj relativePath]];
+              //newAbsolutePath = [[sourceMap rootPath] stringByAppendingPathComponent:[fileObj relativePath]];
+            	/* End of Local objects not used */
               progressCurrentValue++;
               [controller performSelectorOnMainThread:@selector(updateProgress:)
                                            withObject:self

@@ -32,11 +32,17 @@ StepSync_APPLICATION_ICON = StepSync.tiff
 # Resource files
 #
 StepSync_RESOURCE_FILES = \
-Resources/MainMenu.gorm \
 Resources/StepSync.tiff \
 Resources/StepSync.svg \
-Resources/StepSync.help 
 
+#
+# Localization
+#
+StepSync_LANGUAGES =  English French
+StepSync_LOCALIZED_RESOURCE_FILES = \
+MainMenu.gorm \
+StepSync.help \
+InfoPlist.strings
 
 #
 # Header files
