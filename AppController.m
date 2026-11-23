@@ -305,7 +305,7 @@
   [attrStr release];
   [tempStr release];
 
-  tempStr = [NSString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine targetMissingFiles] count]];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine targetMissingFiles] count]];
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -313,7 +313,7 @@
   
   if (nil != [engine targetMissingFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@\n", [[engine targetMissingFiles] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@\n", [[engine targetMissingFiles] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
 						attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];
@@ -381,7 +381,7 @@
   [attrStr release];
   [tempStr release];
   
-  tempStr = [NSString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sourceMissingFiles] count]];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sourceMissingFiles] count]];
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -389,7 +389,7 @@
 
   if (nil != [engine sourceModFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@\n", [[engine sourceMissingFiles] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@\n", [[engine sourceMissingFiles] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];
@@ -428,7 +428,7 @@
   [attrStr release];
   [tempStr release];
   
-  tempStr = [NSString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sourceModFiles]  count]];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sourceModFiles]  count]];
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -436,7 +436,7 @@
 
   if (nil != [engine sourceModFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@\n", [[engine sourceModFiles] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@\n", [[engine sourceModFiles] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];
@@ -475,7 +475,7 @@
   [attrStr release];
   [tempStr release];
   
-  tempStr = [NSString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine targetModFiles]  count]];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine targetModFiles]  count]];
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -483,7 +483,7 @@
 
   if (nil != [engine targetModFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@\n", [[engine targetModFiles] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@\n", [[engine targetModFiles] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];
@@ -523,7 +523,9 @@
   [attrStr release];
   [tempStr release];
   
-  tempStr = [NSString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sizeDiffFiles]  count]];
+  tempStr = [NSMutableString new];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu\n", (unsigned long)[[engine sizeDiffFiles]  count]];
+  
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -531,7 +533,7 @@
 
   if (nil != [engine sizeDiffFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@\n", [[engine sizeDiffFiles] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@\n", [[engine sizeDiffFiles] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];
@@ -576,7 +578,7 @@
   [attrStr release];
   [tempStr release];
   
-  tempStr = [NSString stringWithFormat:@"Count: %lu source - %lu target\n", (unsigned long)[[engine dateDiffFilesSourceMod] count], (unsigned long)[[engine dateDiffFilesTargetMod] count]];
+  tempStr = [NSMutableString stringWithFormat:@"Count: %lu source - %lu target\n", (unsigned long)[[engine dateDiffFilesSourceMod] count], (unsigned long)[[engine dateDiffFilesTargetMod] count]];
   attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
   [attrStrMut appendAttributedString:attrStr];
@@ -584,7 +586,7 @@
 
   if (nil != [engine sizeDiffFiles])
     {
-      tempStr = [NSString stringWithFormat:@"Size: %@ source - %@ target\n", [[engine dateDiffFilesSourceMod] sizeStr], [[engine dateDiffFilesTargetMod] sizeStr]];
+      tempStr = [NSMutableString stringWithFormat:@"Size: %@ source - %@ target\n", [[engine dateDiffFilesSourceMod] sizeStr], [[engine dateDiffFilesTargetMod] sizeStr]];
       attrStr = [[NSAttributedString alloc] initWithString: tempStr
                                             attributes: textAttributes];
       [attrStrMut appendAttributedString:attrStr];

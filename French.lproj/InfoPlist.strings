@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "StepSync";
+NSHumanReadableCopyright = "© Riccardo Mottola, 2017-2021";
+ApplicationDescription = "Outil de Synchonisation de fichiers";
+CopyrightDescription = "Distribué sous la licence GPL v2+";
